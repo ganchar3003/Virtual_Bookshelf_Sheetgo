@@ -1,0 +1,173 @@
+.main {
+    margin: 0 10%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.book_manipulation {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book_manipulation a {
+    text-align: center;
+    padding: 5px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: #4682B4;
+    font-size: 16px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.book_manipulation a:hover {
+    border: 1px solid #4682B4;
+    background-color: white;
+    color: #4682B4;
+}
+
+
+.header_title h1 {
+    padding: 20px;
+    width: auto;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.book_detail {
+    padding: 15px;
+    max-width: 80%;
+    height: auto;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.book_detail img {
+    width: 300px;
+    height: 400px;
+}
+
+.book_detail h3 {
+    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.book_detail p {
+    word-break: keep-all;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info_livro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoria {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.categoria h4 {
+    color: #4682B4;
+}
+
+.info_livro a {
+    text-align: left;
+    text-decoration: none;
+    color: black;
+}
+
+.comment_box {
+    flex-direction: row;
+    padding: 0 20px;
+    width: 80%;
+    border: 1px solid lightgray;
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 80px;
+}
+
+.comment_box h2 {
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.comments {
+    height: auto;
+}
+
+.comment {
+    background-color: white;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.comment_manipulation {
+    padding: 3px;
+}
+
+.comment_manipulation a {
+    text-align: center;
+    padding: 5px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    background-color: #4682B4;
+    font-size: 12px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.comment_manipulation a:hover {
+border: 1px solid #4682B4;
+background-color: white;
+color: #4682B4;
+}
+
+#input_box {
+    margin: 5px;
+    padding: 10px;
+}
+
+#input_box input {
+    margin: 5px;
+    padding: 10px;
+    width: 88%;
+    height: 60px;
+    border: 1px solid lightgray;
+}
+
+#input_box button {
+    background-color: #4682B4;
+    color: white;
+    padding: 10px;
+    width: 8%;
+    height: 60px;
+    border: none;
+}
+
+#input_box button:hover {
+    border: 1px solid #4682B4;
+    background-color: white;
+    color: #4682B4;
+}

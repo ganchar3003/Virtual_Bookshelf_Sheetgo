@@ -1,0 +1,157 @@
+#main {
+    margin: 0;
+    padding: 0;
+
+}
+
+.link_category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    background-color: #295f92;
+    
+}
+
+.link_category a {
+    text-decoration: none;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #295f92;
+}
+
+.link_category a:hover {
+    color: #295f92;
+    background-color: white;
+}
+
+.button_filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button_filter a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase
+}
+
+.category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    list-style: none;
+    
+}
+
+@media (max-width: 1280px) {
+    .total_list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 960px) {
+    .total_list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 630px) {
+    .total_list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.list_item {
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.image_book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_book img {
+    height: 270px;
+    width: 200px;
+    margin-bottom: 8px;
+}
+
+.list_item h2 {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.list_item p {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.link_detail {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.list_item a {
+    padding: 5px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #4682B4;
+    font-size: 14px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.list_item a:hover {
+    border: 1px solid #4682B4;
+    background-color: white;
+    color: #4682B4;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    text-align: center;
+    padding: 20px;
+    border-radius: 1em;
+    width: 500px;
+    height: fit-content;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background-color: #4682B4;
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    border: 1px solid #4682B4;
+    background-color: white;
+    color: #4682B4;
+}
+        

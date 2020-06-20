@@ -1,0 +1,106 @@
+.main form {
+    margin: 0 20%;
+}
+
+.header_form h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.header_form p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.input_form {
+    display: flex;
+    flex-direction: column;
+    background-color: gold;
+}
+
+.input_form fieldset {
+    border: none;
+    margin: 5px 3%;
+    background-color: green;
+}
+
+.input_form legend {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.input_form p {
+    padding: 3px 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_field {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_field input {
+    width: 60%;
+    height: 30px;
+    background-color: indigo;
+    border-radius: 8px;
+}
+
+.checkbox_main {
+
+}
+
+.checkbox {
+    padding: 10px;
+}
+
+.checkbox input {
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+.checkbox label {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.submit_controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit_controls a {
+    text-decoration: none;
+    padding: 20px;
+    margin-right: 200px;
+}
+
+.submit_controls button {
+    padding: 15px;
+    width: 100px;
+    font-size: 16px;
+    color: #fff;
+    background: #4682B4;
+    border: none;
+    border-radius: 10px;
+}
+
+.submit_controls button:hover {
+    opacity: 0.7;
+}
