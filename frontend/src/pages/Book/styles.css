@@ -38,12 +38,15 @@
     width: auto;
     font-size: 40px;
     font-weight: bold;
+    text-align: center;
 }
 
 .book_detail {
     padding: 15px;
     max-width: 80%;
     height: auto;
+    width: 80%;
+    
 }
 
 .image {

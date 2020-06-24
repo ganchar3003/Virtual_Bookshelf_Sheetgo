@@ -1,98 +1,140 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { Home } from 'react-feather';
+import nextId from 'react-id-generator';
 import './styles.css';
+import Dropzone from '../../components/Dropzone';
 
 
-export default class Form extends Component {
-    render() {
-        return ( 
-            <div className="main">
-                <div className="header_form">
-                    <h1>Cadastro de Livro</h1>
-                    <p>Preencha os Dados para inclusão do livro na estante virtual</p>
-                </div>
+export default function Form () {
+    const [title, setTitle] = useState('');
+    const [autor, setAutor] = useState('');
+    const [description, setDescription] = useState('');
+    const history = useHistory();
+    
+    function handleSubmit(e){
+        e.preventDefault();
+        const timestamp = new Date();
+        const _id = nextId();
+        const category = document.querySelector('input[type=radio]:checked').value;
+        
+        const book_info = {
+            title,
+            autor,
+            description,
+            date: timestamp,
+            _id,
+            category,
+            //image
+        }
+        let data_stored = JSON.parse(localStorage.getItem('listadoslivros'));
+        
+        if (data_stored === null) {
+            data_stored = [book_info];
+        } else{
+            data_stored.push(book_info);
+        }
 
-                <form className="input_form">
-                    <fieldset>
-                        <legend>
-                            Imagem
-                        </legend>
-                        <p> Inclua uma imagem de capa no cadastro do seu novo Livro Virtual</p>
-                        <button>Imagem</button>
-                    </fieldset>
+        localStorage.setItem('listadoslivros', JSON.stringify(data_stored));
+        history.push('/');
+    }
 
-                    <fieldset>
-                        <legend> 
-                            Dados do Livro
-                        </legend>
-                        <p> Preencha os dados do seu Livro</p>
+    return ( 
 
-                        <div className="input_field">
-                            <input
-                            type="text" 
-                            name="name" 
-                            placeholder="Nome do Livro"
-                            id="name" 
-                            />
-                        </div>
+        <div className="main">
+            <div className="header_form">
+                <h1>Cadastro de Livro</h1>
+                <p>Preencha os Dados para inclusão do livro na estante virtual</p>
+            </div>
 
-                        <div className="input_field">
+            <form className="input_form" onSubmit={handleSubmit}> 
+                <fieldset>
+                    <legend>
+                        Imagem da Capa do Livro
+                    </legend>
+                    <Dropzone />
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Dados do Livro
+                    </legend>
+
+                    <div className="input_field">
+                        <input
+                        value={title}
+                        onChange={e => setTitle(e.target.value)}
+                        placeholder="Título do Livro"
+                        />
+                    </div>
+
+                    <div className="input_field">
+                        <input 
+                        value={autor}
+                        onChange={e => setAutor(e.target.value)}
+                        placeholder="Autor"
+                        />
+                    </div>
+
+                    <div className="input_field">
+                        <input 
+                        value={description}
+                        onChange={e => setDescription(e.target.value)}
+                        placeholder="Descrição"
+                        />
+                    </div>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        Escolha uma Opção de Leitura
+                    </legend>
+                    <div className="checkbox_main">
+                        <div className="checkbox">
                             <input 
-                            type="text" 
-                            name="autor" 
-                            placeholder="Autor"
-                            id="name" 
-                            />
+                                type="radio"
+                                name="Categoria" 
+                                id="no_category" 
+                                value="Sem Categoria"
+                                />
+                            <label htmlFor="no_category" >Sem Categoria</label>
                         </div>
-
-                        <div className="input_field">
+                        <div className="checkbox">
                             <input 
-                            type="text" 
-                            name="description" 
-                            placeholder="Descrição"
-                            id="name" 
-                            />
+                                type="radio"
+                                name="Categoria" 
+                                id="Reading" 
+                                value="Lendo"
+                                />
+                            <label htmlFor="Reading" >Lendo</label>
                         </div>
-                        
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>
-                            Escolha uma Opção de Leitura
-                        </legend>
-                        <div className="checkbox_main">
-                            <div className="checkbox">
-                                <input 
-                                    type="checkbox" 
-                                    name="Reading" 
-                                    id="Reading" 
-                                    />
-                                <label for="Reading" >Reading</label>
-                            </div>
-                            <div className="checkbox">
-                                <input 
-                                    type="checkbox" 
-                                    name="Wants to Read" 
-                                    id="Wants to Read" 
-                                    />
-                                <label for="Wants to Read" >Wants to Read</label>
-                            </div>
-                            <div className="checkbox">
-                                <input 
-                                    type="checkbox" 
-                                    name="Readed" 
-                                    id="Readed" 
-                                    />
-                                <label for="Readed" >Readed</label>
-                            </div>
+                        <div className="checkbox">
+                            <input 
+                                type="radio"
+                                name="Categoria" 
+                                id="Wants to Read"
+                                value="Quero Ler" 
+                                />
+                            <label htmlFor="Wants to Read" >Quero Ler</label>
                         </div>
-                    </fieldset>
-                </form>
+                        <div className="checkbox">
+                            <input 
+                                type="radio"
+                                name="Categoria" 
+                                id="Readed" 
+                                value="Lido"
+                                />
+                            <label htmlFor="Readed" >Lido</label>
+                        </div>
+                    </div>
+                </fieldset>
                 <div className="submit_controls">
-                    <Link to='/'> Voltar a Home </Link>
+                    <Link to='/'><Home />  Voltar a Home </Link>
                     <button type="submit"> Criar </button>
                 </div>
-            </div>
-        );
-    }
+            </form>
+        </div>
+    );
 }

@@ -2175,6 +2175,11 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+attr-accept@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/attr-accept/-/attr-accept-2.1.0.tgz#a231a854385d36ff7a99647bb77b33c8a5175aee"
+  integrity sha512-sLzVM3zCCmmDtDNhI0i96k6PUztkotSOXqE4kDGQt/6iDi5M+H0srjeF+QC6jN581l4X/Zq3Zu/tgcErEssavg==
+
 autoprefixer@^9.6.1:
   version "9.7.4"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.7.4.tgz#f8bf3e06707d047f0641d87aee8cfb174b2a5378"
@@ -4442,6 +4447,13 @@ file-loader@4.3.0:
   dependencies:
     loader-utils "^1.2.3"
     schema-utils "^2.5.0"
+
+file-selector@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/file-selector/-/file-selector-0.1.12.tgz#fe726547be219a787a9dcc640575a04a032b1fd0"
+  integrity sha512-Kx7RTzxyQipHuiqyZGf+Nz4vY9R1XGxuQl/hLoJwq+J4avk/9wxxgZyHKtbyIPJmbD4A66DWGYfyykWNpcYutQ==
+  dependencies:
+    tslib "^1.9.0"
 
 file-uri-to-path@1.0.0:
   version "1.0.0"
@@ -8618,6 +8630,15 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
+react-dropzone@^11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/react-dropzone/-/react-dropzone-11.0.1.tgz#c8b6a6ed02576e5365af2e2a3f3b31df31feb213"
+  integrity sha512-x/6wqRHaR8jsrNiu/boVMIPYuoxb83Vyfv77hO7/3ZRn8Pr+KH5onsCsB8MLBa3zdJl410C5FXPUINbu16XIzw==
+  dependencies:
+    attr-accept "^2.0.0"
+    file-selector "^0.1.12"
+    prop-types "^15.7.2"
+
 react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
@@ -8629,6 +8650,11 @@ react-feather@^2.0.8:
   integrity sha512-J0dCEOvOxpovHeOVj3+8mAhN3/UERTfX6rSxnV6x4E+0s+STY536jhSjRfpSvTQA0SSFjYr4KrpPfdsLmK+zZg==
   dependencies:
     prop-types "^15.7.2"
+
+react-id-generator@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-id-generator/-/react-id-generator-3.0.0.tgz#20fba0a12355924f1d7b4bfe2ac262c0ad02c7ef"
+  integrity sha512-egmdswpzA/z8UlignCZKmJqrO0EaqmW13M8756wE+V/6NtYf0CdvDjkGpat/Q/djXfg7F/C0267Gff1RHgpfIQ==
 
 react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"

@@ -83,6 +83,7 @@
     padding: 10px;
     max-width: 300px;
     min-width: 300px;
+    height: fit-content;
 }
 
 .image_book {
@@ -102,9 +103,35 @@
     padding: 8px;
 }
 
+.autor {
+    font-size: 16px;
+    color: #4682B4;
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
 .list_item p {
     padding: 5px;
     margin-bottom: 10px;
+}
+
+.category_field {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.list_item strong {
+    font-size: 12px;
+    text-align: end;
+}
+
+.list_item h5 {
+    color: #4682B4;
+    font-size: 12px;
+    text-align: end;
+    margin-bottom: 8px;
 }
 
 .link_detail {
@@ -113,7 +140,7 @@
     align-items: center;
 }
 
-.list_item a {
+.list_item button {
     padding: 5px;
     text-align: center;
     border-radius: 6px;
@@ -121,9 +148,10 @@
     font-size: 14px;
     color: #FFF;
     text-decoration: none;
+    border: none;
 }
 
-.list_item a:hover {
+.list_item button:hover {
     border: 1px solid #4682B4;
     background-color: white;
     color: #4682B4;
@@ -137,10 +165,10 @@
 
 .footer a {
     text-align: center;
-    padding: 20px;
-    border-radius: 1em;
-    width: 500px;
-    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    width: 350px;
+    height: min-content;
     margin-top: 30px;
     margin-bottom: 40px;
     background-color: #4682B4;
