@@ -3,17 +3,6 @@
     padding: 0;
 }
 
-#main h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 25px;
-    color: #4682B4;
-}
-
 #navigation {
     display: flex;
     justify-content: space-around;
@@ -50,8 +39,7 @@
 }
 
 .new_book a:hover {
-    border: 1px solid #4682B4;
-    background-color: white;
+    background-color: rgb(169, 200, 240);
     color: #4682B4;
 }
 
@@ -64,7 +52,7 @@
     
 }
 
-.link_category a {
+.link_category button {
     text-decoration: none;
     padding: 15px;
     width: 300px;
@@ -73,9 +61,11 @@
     font-weight: bold;
     text-transform: uppercase;
     background-color: #295f92;
+    border: none;
+    font-size: 16px;
 }
 
-.link_category a:hover {
+.link_category button:hover {
     color: #295f92;
     background-color: white;
 }
@@ -165,7 +155,7 @@
     align-items: center;
 }
 
-.list_item a {
+.link_detail button {
     padding: 5px;
     text-align: center;
     border-radius: 6px;
@@ -173,11 +163,11 @@
     font-size: 14px;
     color: #FFF;
     text-decoration: none;
+    border: none;
 }
 
-.list_item a:hover {
-    border: 1px solid #4682B4;
-    background-color: white;
+.link_detail button:hover {
+    background-color: rgb(169, 200, 240);
     color: #4682B4;
 }
 

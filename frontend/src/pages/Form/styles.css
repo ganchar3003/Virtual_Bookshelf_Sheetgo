@@ -128,8 +128,7 @@
 }
 
 .submit_controls button:hover {
-    border: 1px solid #4682B4;
-    background-color: white;
+    background-color: rgb(169, 200, 240);
     color: #4682B4;
 }
 

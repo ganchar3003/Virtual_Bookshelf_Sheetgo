@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Home } from 'react-feather';
-import nextId from 'react-id-generator';
 import './styles.css';
 import Dropzone from '../../components/Dropzone';
 
@@ -10,12 +9,13 @@ export default function Form () {
     const [title, setTitle] = useState('');
     const [autor, setAutor] = useState('');
     const [description, setDescription] = useState('');
+    //const [selectedImage, setSelectedImage] = useState('');
     const history = useHistory();
     
     function handleSubmit(e){
         e.preventDefault();
         const timestamp = new Date();
-        const _id = nextId();
+        const _id = String(Math.random());
         const category = document.querySelector('input[type=radio]:checked').value;
         
         const book_info = {
@@ -52,7 +52,7 @@ export default function Form () {
                     <legend>
                         Imagem da Capa do Livro
                     </legend>
-                    <Dropzone />
+                    <Dropzone /*onFileUpLoaded={setSelectedImage}*/ />
 
                 </fieldset>
 
@@ -97,7 +97,7 @@ export default function Form () {
                                 type="radio"
                                 name="Categoria" 
                                 id="no_category" 
-                                value="Sem Categoria"
+                                value="Sem_Categoria"
                                 />
                             <label htmlFor="no_category" >Sem Categoria</label>
                         </div>
@@ -115,7 +115,7 @@ export default function Form () {
                                 type="radio"
                                 name="Categoria" 
                                 id="Wants to Read"
-                                value="Quero Ler" 
+                                value="Quero_Ler" 
                                 />
                             <label htmlFor="Wants to Read" >Quero Ler</label>
                         </div>
