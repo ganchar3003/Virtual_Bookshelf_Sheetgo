@@ -18,23 +18,23 @@ com o servidor ativo, se a aplicação não abrir automaticamente, deve colocar 
 
 <img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/localhost.png" alt="LocalHost" width="300" />
 
-## Como o projeot funciona
+## Como o projeto funciona
 
 Inicialização na home do projeto
 
-<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/home_virtualBookShelf.png" alt="Home" width="400" />
+<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/home_virtualBookShelf.png" alt="Home" width="600" />
 
 Pomemos verificar informações mais espefícias do livro, fazer edição dos detalhes do livro e adicionar comentários no mesmo
 
-<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/book_detail.png" alt="Book_Detail" width="400" />
+<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/book_detail.png" alt="Book_Detail" width="600" />
 
 Podemos incluir novos livros para organização das leituras diárias
 
-<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/Cadastro.png" alt="cadastro" width="400" />
+<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/Cadastro.png" alt="cadastro" width="600" />
 
 
 ## Bugs e atualizações
 
-ativar função de edição de comentários que não está funcionando corretamente
-incluir ajuste de entrada de imagens das capas dos livro no Dropzone
-ativar funcionalidade de classificação dos livro por página seguindo ordens pré-determinandas (por Data de Criação e por Ordem Alfabética)
+-ativar função de edição de comentários que não está funcionando corretamente
+-incluir ajuste de entrada de imagens das capas dos livro no Dropzone
+-ativar funcionalidade de classificação dos livro por página seguindo ordens pré-determinandas (por Data de Criação e por Ordem Alfabética)
