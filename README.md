@@ -35,6 +35,6 @@ Podemos incluir novos livros para organização das leituras diárias
 
 ## Bugs e atualizações
 
-- [] Ativar função de edição de comentários que não está funcionando corretamente
-- [] Incluir ajuste de entrada de imagens das capas dos livro no Dropzone
-- [] Ativar funcionalidade de classificação dos livro por página seguindo ordens pré-determinandas (por Data de Criação e por Ordem Alfabética)
+- Ativar função de edição de comentários que não está funcionando corretamente
+- Incluir ajuste de entrada de imagens das capas dos livro no Dropzone
+- Ativar funcionalidade de classificação dos livro por página seguindo ordens pré-determinandas (por Data de Criação e por Ordem Alfabética)
