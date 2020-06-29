@@ -13,15 +13,15 @@ Forma de inicialização do projeto
 
 Inicialização na home do projeto
 
-    <img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/home_virtualBookShelf.png" alt="Home" width="400" />
+<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/home_virtualBookShelf.png" alt="Home" width="400" />
 
 Pomemos verificar informações mais espefícias do livro, fazer edição dos detalhes do livro e adicionar comentários no mesmo
 
-    <img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/book_detail.png" alt="Book_Detail" width="400" />
+<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/book_detail.png" alt="Book_Detail" width="400" />
 
 Podemos incluir novos livros para organização das leituras diárias
 
-    <img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/Cadastro.png" alt="cadastro" width="400" />
+<img src="https://github.com/ganchar3003/Virtual_Bookshelf_Sheetgo/blob/master/Cadastro.png" alt="cadastro" width="400" />
 
 
 ## Bugs e atualizações
