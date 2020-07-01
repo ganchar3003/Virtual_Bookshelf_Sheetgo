@@ -14,6 +14,7 @@ export default function Book() {
     const [book_comments, setBookComments] = useState([]);
     const [modalIsVisible, setModalIsVisible] = useState(false);
     const [modalCommentIsVisible, setModalCommentIsVisible] = useState(false);
+    const [idCommentUpdate, setIdCommentUpdate] = useState('');
 
 
     // --------- Gerenciadores de Inicialização -----------------------
@@ -84,24 +85,30 @@ export default function Book() {
         window.location.reload()
     }
 
-    function handleCommentUpdate (id) {
-        let array_comments = JSON.parse(localStorage.getItem('listaComentarios'));
-        //console.log(id);
-        //console.log(array_comments);
-        const index = array_comments.findIndex(obj => obj.id_comment === id);
-        //console.log(index);
-        //array_comments[index].comment = updatedComment;
-        //console.log(array_comments);
-        //localStorage.setItem('listaComentarios', JSON.stringify(array_comments));
-    }
+    function handleCommentUpdate (passed_id) {
+        if (idCommentUpdate === passed_id){
+            let array_comments = JSON.parse(localStorage.getItem('listaComentarios'));
+            const index = array_comments.findIndex(obj => obj.id_comment === passed_id);
+            array_comments[index].comment = updatedComment;
+            localStorage.setItem('listaComentarios', JSON.stringify(array_comments));
+        }
 
-    function setOpenModalComment () {
+    }
+    
+    function setOpenModalComment (id) {
+        setIdCommentUpdate(id);
         setModalCommentIsVisible(true);
     }
 
     function handleCloseModalComment() {
         setModalCommentIsVisible(false);
     }
+
+    // --------- Funcional Components ---------------------------
+
+
+
+
 
     // --------- Retorno JSX ---------------------------
 
@@ -143,7 +150,7 @@ export default function Book() {
                             </p>
 
                             <div className="comment_manipulation">
-                                <button onClick={() => setOpenModalComment()}>Editar</button>
+                                <button onClick={() => setOpenModalComment(book_comment.id_comment)}>Editar</button>
                                 {modalCommentIsVisible ?
                                 <div className="fundo">
                                     <div className="containerComment" >
@@ -161,7 +168,6 @@ export default function Book() {
                                 </div> :
                                     null
                                 }
-
                                 <button onClick={() => handleDeleteComment(book_comment.id_comment)}>Excluir</button>
                             </div>
                         </div>
