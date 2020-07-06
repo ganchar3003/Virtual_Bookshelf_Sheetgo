@@ -152,7 +152,7 @@ export default function Book() {
                             <div className="comment_manipulation">
                                 <button onClick={() => setOpenModalComment(book_comment.id_comment)}>Editar</button>
                                 {modalCommentIsVisible ?
-                                <div className="fundo">
+                                <div id="fundo">
                                     <div className="containerComment" >
                                         <form onSubmit={handleCommentUpdate(book_comment.id_comment)}>
                                             <input

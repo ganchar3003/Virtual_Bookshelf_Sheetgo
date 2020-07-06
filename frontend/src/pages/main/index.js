@@ -9,6 +9,7 @@ export default function Main () {
     // -----  Variaveis --------------------------------
 
     const [data_stored, setData_stored] = useState([]);
+    const [chosedRank, setChosedRank] = useState(0);
 
 
     // --------- Gerenciadores de Inicialização -----------------------
@@ -54,11 +55,35 @@ export default function Main () {
     }, []);
 
     // --------- Funções de MAnipulação ---------------------------
-    /*
+
     function handleRankBook () {
-        //pega o array de books da categoria, faz um sort seguindo a classificação desejada, seta o datastored e recarrega a página
+
+        if (chosedRank === 1){
+            data_stored.sort(ordenarPorData);
+            console.log(data_stored);
+            setData_stored(data_stored);
+            setChosedRank(0);
+        } else {
+            data_stored.sort(ordenarPorNome);
+            console.log(data_stored);
+            setData_stored(data_stored);
+            setChosedRank(1);
+        }
     }
-    */
+
+    function ordenarPorData (a, b){
+        if (a.date < b.date) return -1;
+        if (a.date > b.date) return 1;
+        return 0;
+    }
+
+    function ordenarPorNome (a, b) {
+        if (a.title < b.title) return -1;
+        if (a.title > b.title) return 1;
+        return 0;
+    }
+
+
     // --------- Retorno JSX ---------------------------
 
     return (
@@ -70,9 +95,9 @@ export default function Main () {
                 <Link to='category/Quero_Ler'> Quero Ler </Link>     
 
                 <div className="button_filter">
-                <Link to="/">Classificar</Link>
+                <button onClick={handleRankBook}>Classificar</button>
                 </div>
-            </div>
+            </div> 
 
 
             <div className="footer">

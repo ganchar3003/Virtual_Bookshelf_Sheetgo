@@ -29,6 +29,22 @@
     background-color: white;
 }
 
+.link_category button {
+    text-decoration: none;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #295f92;
+}
+
+.link_category button:hover {
+    color: #295f92;
+    background-color: white;
+}
+
 .button_filter {
     display: flex;
     justify-content: flex-end;

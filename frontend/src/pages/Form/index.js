@@ -15,6 +15,7 @@ export default function Form () {
     function handleSubmit(e){
         e.preventDefault();
         const timestamp = new Date();
+        let formatted_date = timestamp.getDate() + "-" + timestamp.getMonth() + "-" + timestamp.getFullYear()
         const _id = String(Math.random());
         const category = document.querySelector('input[type=radio]:checked').value;
         
@@ -22,7 +23,7 @@ export default function Form () {
             title,
             autor,
             description,
-            date: timestamp,
+            date: formatted_date,
             _id,
             category,
             //image
